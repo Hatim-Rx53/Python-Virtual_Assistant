@@ -7,6 +7,8 @@ This is an Virtual Assistant named DOODLE made using various python libraries.
 
 ## How to download - 
 
+Download this project from here [Download Tic Tac Toe](https://downgit.github.io/#/home?url=)
+
 
 ## Requirements -
 
