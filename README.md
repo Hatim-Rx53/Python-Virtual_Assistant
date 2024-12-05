@@ -7,7 +7,7 @@ This is an Virtual Assistant named DOODLE made using various python libraries.
 
 ## How to download - 
 
-Download this project from here [Download DOODLE](https://downgit.github.io/#/home?url=https://github.com/Hatim-Rx53/Python-Virtual_Assistant.git)
+Download this project from here [Download DOODLE](https://downgit.github.io/#/home?url=https://github.com/Hatim-Rx53/Python-Virtual_Assistant)
 
 
 ## Requirements -
