@@ -256,23 +256,6 @@ def Take_query():
 			pywhatkit.playonyt(query)
 			continue
 
-#		elif 'news' in query:
-			
-#			our_url = "https://newsapi.org/v2/top-headlines?country=in&apiKey=311c7b89e2e44e0c80be02ec1fb2edcc"
-			
-#			data = requests.get(our_url).json()
-			
-#			article = data["articles"]
-			
-#			result = []
-			
-#			for text in article:
-#				result.append(text["title"])
-				
-#			for i in range(min(5, len(result))):
-#				print(i + 1, result[i])
-#				speak(result[i])
-#				continue
 
 if __name__ == '__main__':
 	
