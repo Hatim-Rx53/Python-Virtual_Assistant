@@ -169,6 +169,23 @@ def Take_query():
 			speak(result)
 			continue
 
+		elif "who are" in query:
+			
+			# if any one wants to have a information
+			# from wikipedia
+			speak("Checking the wikipedia ")
+			query = query.replace("wikipedia", "")
+			query = query.replace("who is", "")
+			
+			# it will give the summary of 4 lines from 
+			# wikipedia we can increase and decrease 
+			# it also.
+			result = wikipedia.summary(query, sentences=4)
+			speak("According to wikipedia")
+			print(result)
+			speak(result)
+			continue
+
 		elif "what is" in query:
 			
 			# if any one wants to have information
