@@ -5,7 +5,6 @@ import datetime
 import wikipedia
 import pyjokes
 import pywhatkit
-import requests
 from AppOpener import open, close
 
 
