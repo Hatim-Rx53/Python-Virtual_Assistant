@@ -5,7 +5,9 @@ import datetime
 import wikipedia
 import pyjokes
 import pywhatkit
+import requests
 from AppOpener import open, close
+from bs4 import BeautifulSoup
 
 
 # this method is for taking the commands
@@ -108,6 +110,23 @@ def Hello():
 	# is called it will say hello and then 
 	# take query
 	speak("hello sir I am DOODLE your desktop assistant. Tell me how may I help you")
+
+def get_news():
+	url = 'https://news.google.com/news/rss'
+	output = ''
+
+	try:
+		r = requests.get(url)
+		xml = r.text
+		soup = BeautifulSoup(xml, 'xml')
+
+		all_news = soup.find_all('item')
+		for index, news in enumerate(all_news[:20]):
+			output += f'{index+1} : {news.title.text}\n\n'
+
+		return output
+	except:
+		return "Couldn't connect with internet"
 
 
 def Take_query():
@@ -272,6 +291,10 @@ def Take_query():
 			pywhatkit.playonyt(query)
 			continue
 
+		elif "news" in query:
+			news = get_news()
+			print(news)
+			speak(news)
 
 if __name__ == '__main__':
 	
