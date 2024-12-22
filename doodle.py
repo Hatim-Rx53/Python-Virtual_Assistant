@@ -1,3 +1,4 @@
+import time
 import pyttsx3
 import speech_recognition as sr
 import webbrowser 
@@ -8,7 +9,7 @@ import pywhatkit
 import requests
 from AppOpener import open, close
 from bs4 import BeautifulSoup
-
+from pygooglenews import GoogleNews
 
 # this method is for taking the commands
 # and recognizing the command from the
@@ -112,21 +113,18 @@ def Hello():
 	speak("hello sir I am DOODLE your desktop assistant. Tell me how may I help you")
 
 def get_news():
-	url = 'https://news.google.com/news/rss'
-	output = ''
+	gn = GoogleNews(lang='en', country='IN')
+	top = gn.geo_headlines('India')
 
-	try:
-		r = requests.get(url)
-		xml = r.text
-		soup = BeautifulSoup(xml, 'xml')
+	entries = top["entries"]
+	count = 0
+	for entry in entries:
+		count = count + 1
+		if count <= 10:
+			print(
+				str(count) + ". " + entry["title"])
+			time.sleep(0.25)
 
-		all_news = soup.find_all('item')
-		for index, news in enumerate(all_news[:20]):
-			output += f'{index+1} : {news.title.text}\n\n'
-
-		return output
-	except:
-		return "Couldn't connect with internet"
 
 
 def Take_query():
