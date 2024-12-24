@@ -95,15 +95,9 @@ def tellDay():
 def tellTime():
 	
 	# This method will give the time
-	time = str(datetime.datetime.now())
-	
-	# the time will be displayed like 
-	# this "2020-06-05 17:50:14.582630"
-	#nd then after slicing we can get time
-	print(time)
-	hour = time[11:13]
-	min = time[14:16]
-	speak("The time is sir" + hour + "Hours and" + min + "Minutes") 
+	present_time = time.localtime()
+	Timehour = time.strftime("%I:%M %p", present_time)
+	print(Timehour)
 
 def Hello():
 	
