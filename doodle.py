@@ -119,7 +119,19 @@ def get_news():
 				str(count) + ". " + entry["title"])
 			time.sleep(0.25)
 
+def get_random_joke():
+    headers = {
+        'Accept': 'application/json'}
 
+    res = requests.get("https://icanhazdadjoke.com/", headers=headers).json()
+    return res["joke"]
+
+def get_random_advice():
+    res = requests.get("https://api.adviceslip.com/advice").json()
+    return res['slip']['advice']
+
+
+# Driver Code
 
 def Take_query():
 
@@ -241,6 +253,12 @@ def Take_query():
 			speak("Opening")
 			webbrowser.open(query)
 			continue
+
+		elif "search on google" in query:
+			query = query.replace('search on google', '')
+			speak("Searching on google")
+			pywhatkit.search(query)
+			continue
 		
 		elif "tell me your name" in query:
 			speak("I am Doodle. Your desktop Assistant")
@@ -253,9 +271,8 @@ def Take_query():
 			continue
 
 		elif "joke" in query:
-			joke=pyjokes.get_joke(language='en', category= 'all')
-			print(joke)
-			speak(joke)
+			print(get_random_joke())
+			speak(get_random_joke())
 			continue
 
 # for opening and closing Apps
@@ -287,6 +304,13 @@ def Take_query():
 			news = get_news()
 			print(news)
 			speak(news)
+			continue
+
+		elif "give an advice" in query:
+			advice = get_random_advice()
+			print(advice)
+			speak(advice)
+			continue
 
 if __name__ == '__main__':
 	
