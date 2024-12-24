@@ -59,12 +59,12 @@ To run this program double click on doodle.py file, it will first great you then
 
 ## Tasks that DOODLE can do -
 
-Can tell time & day.
-Can open and close apps as you say.
-Can search Youtube.
-Can search Wikipedia.
-Can open specified websites.
-Can tell jokes.
+1. Can tell time & day.
+2. Can open and close apps as you say.
+3. Can search Youtube.
+4. Can search Wikipedia.
+5. Can open specified websites.
+6. Can tell jokes.
 
 ## Contributions -
 
