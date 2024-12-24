@@ -149,7 +149,7 @@ def Take_query():
 			tellDay()
 			continue
 		
-		elif "tell me the time" in query:
+		elif "time" in query:
 			tellTime()
 			continue
 		
