@@ -14,19 +14,40 @@ Download this project from here [Download DOODLE](https://downgit.github.io/#/ho
 
 You will need to download following libraries :
 
-1. pyttsx3 (Python Text To Speech 3) - To install use command "pip install pyttsx3"
+1. pyttsx3 (Python Text To Speech 3) - To install use command :
+```bash 
+pip install pyttsx3
+```
 
-2. Speech Recognition - To install use command "pip install SpeechRecognition"
+2. Speech Recognition - To install use command :
+```bash
+pip install SpeechRecognition
+```
 
-3. Web browser - To install use command "pip install webbrowser"
+3. Web browser - To install use command :
+```bash
+pip install webbrowser
+```
 
-4. Wikipedia - To install use command "pip install wikipedia"
+4. Wikipedia - To install use command :
+```bash
+pip install wikipedia
+```
 
-5. Python jokes - To install use command "pip install pyjokes"
+5. Python jokes - To install use command :
+```bash
+pip install pyjokes
+```
 
-6. PyWhatKit - To install use command "pip install pywhatkit"
+6. PyWhatKit - To install use command :
+```bash
+pip install pywhatkit
+```
 
-7. App opener - To install use command "pip install appopener"
+7. App opener - To install use command :
+```bash
+pip install appopener
+```
 
 
 
@@ -35,6 +56,15 @@ You will need to download following libraries :
 
 To run this program double click on doodle.py file, it will first great you then you can give commands.
 
+
+## Tasks that DOODLE can do -
+
+Can tell time & day.
+Can open and close apps as you say.
+Can search Youtube.
+Can search Wikipedia.
+Can open specified websites.
+Can tell jokes.
 
 ## Contributions -
 
