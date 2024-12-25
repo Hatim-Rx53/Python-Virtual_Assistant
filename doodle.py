@@ -100,6 +100,7 @@ def tellTime():
 	present_time = time.localtime()
 	Timehour = time.strftime("%I:%M %p", present_time)
 	print(Timehour)
+	speak("The current time is " + Timehour)
 
 def Hello():
 	
