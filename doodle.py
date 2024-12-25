@@ -117,6 +117,7 @@ def get_news():
 		if count <= 10:
 			print(
 				str(count) + ". " + entry["title"])
+			speak(entry["title"])
 			time.sleep(0.25)
 
 def get_random_joke():
