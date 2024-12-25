@@ -54,17 +54,21 @@ pip install appopener
 ## How to use -
 
 
-To run this program double click on doodle.py file, it will first great you then you can give commands.
+1. To run this program double click on doodle.py file, it will first great you then you can give commands.
+2. To close the program just say "Bye" or "Turn off".
 
 
 ## Tasks that DOODLE can do -
 
-1. Can tell time & day.
-2. Can open and close apps as you say.
-3. Can search Youtube.
-4. Can search Wikipedia.
-5. Can open specified websites.
-6. Can tell jokes.
+1. Tell time & day.
+2. Open and close apps as you say.
+3. Search Youtube.
+4. Search Wikipedia.
+5. Search anything on Google.
+6. Open specified websites.
+7. Tell jokes.
+8. Give advice.
+9. Can fetch current News headlines.
 
 ## Contributions -
 
