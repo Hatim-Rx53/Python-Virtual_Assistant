@@ -34,9 +34,9 @@ pip install webbrowser
 pip install wikipedia
 ```
 
-5. Python jokes - To install use command :
+5. Requests - To install use command :
 ```bash
-pip install pyjokes
+pip install requests
 ```
 
 6. PyWhatKit - To install use command :
@@ -49,6 +49,10 @@ pip install pywhatkit
 pip install appopener
 ```
 
+8. Google news - To install use command :
+```bash
+pip install pygooglenews
+```
 
 
 ## How to use -
