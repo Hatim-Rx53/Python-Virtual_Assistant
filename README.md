@@ -54,7 +54,6 @@ pip install appopener
 pip install pygooglenews
 ```
 
-
 ## How to use -
 
 
@@ -73,6 +72,7 @@ pip install pygooglenews
 7. Tell jokes.
 8. Give advice.
 9. Can fetch current News headlines.
+10. Tell random facts.
 
 ## Contributions -
 
