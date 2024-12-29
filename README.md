@@ -63,16 +63,16 @@ pip install pygooglenews
 
 ## Tasks that DOODLE can do -
 
-1. Tell time & day.
-2. Open and close apps as you say.
-3. Search Youtube.
-4. Search Wikipedia.
-5. Search anything on Google.
-6. Open specified websites.
-7. Tell jokes.
-8. Give advice.
-9. Can fetch current News headlines.
-10. Tell random facts.
+1.  Tell time & day.
+2.  Open and close apps as you say.
+3.  Search Youtube.
+4.  Search Wikipedia.
+5.  Search anything on Google.
+6.  Open specified websites.
+7.  Tell jokes.
+8.  Give advice.
+9.  Can fetch current News headlines.
+10.  Tell random facts.
 
 ## Contributions -
 
