@@ -10,6 +10,27 @@ from AppOpener import open, close
 from bs4 import BeautifulSoup
 from pygooglenews import GoogleNews
 
+
+def speak(audio):
+	
+	engine = pyttsx3.init()
+	# getter method(gets the current value
+	# of engine property)
+	voices = engine.getProperty('voices')
+	
+	# setter method .[0]=male voice and 
+	# [1]=female voice in set Property.
+	engine.setProperty('voice', voices[0].id)
+	engine.setProperty('rate', 160)
+	
+	# Method for the speaking of the assistant
+	engine.say(audio) 
+	
+	# Blocks while processing all the currently
+	# queued commands
+	engine.runAndWait()
+
+
 # this method is for taking the commands
 # and recognizing the command from the
 # speech_Recognition module we will use
@@ -54,25 +75,6 @@ def takeCommand():
 			return "None"
 		
 		return Query
-
-def speak(audio):
-	
-	engine = pyttsx3.init()
-	# getter method(gets the current value
-	# of engine property)
-	voices = engine.getProperty('voices')
-	
-	# setter method .[0]=male voice and 
-	# [1]=female voice in set Property.
-	engine.setProperty('voice', voices[0].id)
-	engine.setProperty('rate', 160)
-	
-	# Method for the speaking of the assistant
-	engine.say(audio) 
-	
-	# Blocks while processing all the currently
-	# queued commands
-	engine.runAndWait()
 
 def tellDay():
 	
@@ -132,6 +134,16 @@ def get_random_joke():
 def get_random_advice():
     res = requests.get("https://api.adviceslip.com/advice").json()
     return res['slip']['advice']
+
+def get_random_fact():
+    url = 'https://uselessfacts.jsph.pl/random.json?language=en'
+    try:
+        response = requests.get(url)
+        response.raise_for_status()  # Ensure we raise an exception for bad status codes
+        fact_data = response.json()
+        return fact_data['text']
+    except requests.exceptions.RequestException as e:
+        return f"Error fetching fact: {e}"
 
 
 # Driver Code
@@ -314,6 +326,13 @@ def Take_query():
 			print(advice)
 			speak(advice)
 			continue
+
+		elif "tell me a fact" in query:
+			fact = get_random_fact()
+			print(fact)
+			speak(fact)
+			continue
+
 
 if __name__ == '__main__':
 	
