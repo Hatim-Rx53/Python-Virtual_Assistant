@@ -72,7 +72,7 @@ pip install pygooglenews
 7.  Tell jokes.
 8.  Give advice.
 9.  Can fetch current News headlines.
-10.  Tell random facts.
+10. Tell random facts.
 
 ## Contributions -
 
