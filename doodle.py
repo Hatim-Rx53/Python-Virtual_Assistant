@@ -166,20 +166,20 @@ def Take_query():
 		# query matches and we get the perfect 
 		# output
 		query = takeCommand().lower()
-		
+
 		if "open google" in query:
 			speak("Opening Google ")
 			webbrowser.open("www.google.com")
 			continue
-			
+
 		elif "today's day" in query:
 			tellDay()
 			continue
-		
+
 		elif "time" in query:
 			tellTime()
 			continue
-		
+
 		# this will exit and terminate the program
 		elif "turn off" in query:
 			speak("Initialising self Destruct sequence in 3...2...1... Justkidding byee seeya")
@@ -188,7 +188,7 @@ def Take_query():
 		elif "bye" in query:
 			speak("Initialising self Destruct sequence in 3...2...1... Justkidding byee seeya")
 			exit()
-		
+
 		elif "who is" in query:
 			
 			# if any one wants to have a information
@@ -274,7 +274,7 @@ def Take_query():
 			speak("Searching on google")
 			pywhatkit.search(query)
 			continue
-		
+
 		elif "tell me your name" in query:
 			speak("I am Doodle. Your desktop Assistant")
 			continue
@@ -310,12 +310,12 @@ def Take_query():
 			query = query.replace('youtube', '')
 			query = query.replace('video', '')
 			query = query.replace('play', '')
-
+		
 			speak('playing'+query)
 			pywhatkit.playonyt(query)
 			continue
 
-		elif "news" in query:
+		elif "news headlines" in query:
 			news = get_news()
 			print(news)
 			speak(news)
