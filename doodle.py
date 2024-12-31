@@ -48,7 +48,7 @@ def takeCommand():
 		
 		# seconds of non-speaking audio before 
 		# a phrase is considered complete
-		r.pause_threshold = 1.5
+		r.pause_threshold = 0.35
 		audio = r.listen(source)
 		
 		# Now we will be using the try and catch
