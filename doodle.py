@@ -70,7 +70,6 @@ def takeCommand():
 			print(e)
 			print("Say that again sir")
 			speak("Say that again sir")
-			time.sleep(0.25)
 			print("")
 			return "None"
 		
