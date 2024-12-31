@@ -48,7 +48,7 @@ def takeCommand():
 		
 		# seconds of non-speaking audio before 
 		# a phrase is considered complete
-		r.pause_threshold = 1
+		r.pause_threshold = 0.7
 		audio = r.listen(source)
 		
 		# Now we will be using the try and catch
@@ -70,6 +70,7 @@ def takeCommand():
 			print(e)
 			print("Say that again sir")
 			speak("Say that again sir")
+			time.sleep(0.25)
 			print("")
 			return "None"
 		
