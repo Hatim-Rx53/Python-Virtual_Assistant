@@ -310,7 +310,8 @@ def Take_query():
 			query = query.replace('youtube', '')
 			query = query.replace('video', '')
 			query = query.replace('play', '')
-		
+			query = query.replace('search', '')
+
 			speak('playing'+query)
 			pywhatkit.playonyt(query)
 			continue
