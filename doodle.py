@@ -11,26 +11,6 @@ from bs4 import BeautifulSoup
 from pygooglenews import GoogleNews
 
 
-def speak(audio):
-	
-	engine = pyttsx3.init()
-	# getter method(gets the current value
-	# of engine property)
-	voices = engine.getProperty('voices')
-	
-	# setter method .[0]=male voice and 
-	# [1]=female voice in set Property.
-	engine.setProperty('voice', voices[0].id)
-	engine.setProperty('rate', 160)
-	
-	# Method for the speaking of the assistant
-	engine.say(audio) 
-	
-	# Blocks while processing all the currently
-	# queued commands
-	engine.runAndWait()
-
-
 # this method is for taking the commands
 # and recognizing the command from the
 # speech_Recognition module we will use
@@ -75,6 +55,26 @@ def takeCommand():
 			return "None"
 		
 		return Query
+
+def speak(audio):
+	
+	engine = pyttsx3.init()
+	# getter method(gets the current value
+	# of engine property)
+	voices = engine.getProperty('voices')
+	
+	# setter method .[0]=male voice and 
+	# [1]=female voice in set Property.
+	engine.setProperty('voice', voices[0].id)
+	engine.setProperty('rate', 160)
+	
+	# Method for the speaking of the assistant
+	engine.say(audio) 
+	
+	# Blocks while processing all the currently
+	# queued commands
+	engine.runAndWait()
+
 
 def tellDay():
 	
