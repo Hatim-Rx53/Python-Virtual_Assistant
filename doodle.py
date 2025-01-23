@@ -78,7 +78,7 @@ def speak(audio):
 
 def tellDay():
 	
-	# This function is for telling the
+	# This function is for telling the helllo
 	# day of the week
 	day = datetime.datetime.today().weekday() + 1
 	
